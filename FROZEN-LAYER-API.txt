@@ -1,0 +1,73 @@
+Frozen layer pair API 1.2
+
+Install bin/data/lua/hautlle/v1/frozen_layer_pair.lua in the matching executable
+data tree. The example is examples/FROZEN_LAYER_PAIR_MINIMAL/main.lua; it draws
+an orange rectangle and shifts it eight layer pixels when triggered.
+
+Typical usage
+  local api=dofile(of.toDataPath('lua/hautlle/v1/frozen_layer_pair.lua',true))
+  assert(api.API_VERSION==1 and api.API_MINOR>=2)
+  local layer=api.new(print,{width=320,height=180})
+  local ok=layer:paint(function()
+      of.clear(0,0,0,255)
+      of.setColor(255,160,40,255)
+      of.drawRectangle(40,45,80,90)
+  end)
+  if ok then ok=layer:shift(0,0,320,180,8,0) end
+  if ok then ok=layer:draw() end
+  local clean=layer:release()
+
+Supported methods
+- new(logger, options): logger defaults to print; it must not throw. Dimensions
+  are 320x180 (default), 640x360, 960x540 or 1280x720. Construction makes no GL
+  calls. Invalid dimensions raise an assertion before resource creation.
+- paint(callback): first use allocates and validates both FBOs, clears both, then
+  invokes the callback on the current layer. Only a fully successful paint
+  initializes content for transforms. Returns true/false.
+- shift(x,y,w,h,dx,dy): wrap shifts within the integer region. Requires a prior
+  successful paint; integer offsets and in-bounds positive region dimensions.
+- mirror(x,y,w,h): mirrors the region's left half onto its right half. Width
+  must be even. Both transform methods return true/false.
+- draw(): presents the current layer at 0,0,1280,720, preserving the existing
+  presentation behavior. An untouched new instance is a successful no-op.
+- release(): permanently closes the instance immediately, then unloads its owned
+  shader and clears owned FBOs. Returns true if cleanup calls succeeded. Repeated
+  release after success is harmless. Rendering methods on a closed instance
+  return false without any OF calls; create a new instance for mode reentry.
+
+Failure semantics
+A paint/initialization/transform failure stops the instance and attempts cleanup.
+Transforming before a successful initial paint is a terminal usage error and
+performs no allocation. There is no automatic initialization/render retry.
+Failed cleanup handles remain owned for an explicit later release() retry. Once
+release begins, success or failure never reopens the instance. If FBO/shader/style
+unwind is uncertain, release returns false and retains handles; do not reset
+internal flags to force reuse. Host mode retirement must resolve that boundary.
+Keep a failed instance reachable until cleanup or host retirement is complete.
+
+Rendering contract
+Use this helper in the host's normal 2D GL phase, with no caller custom shader
+active and texture unit 1 available. Paint callbacks use balanced OF operations;
+they must not yield or reenter this layer's paint/transform/draw/release methods.
+The helper is not a general GL-state guard and does not save arbitrary depth,
+scissor, shader or texture bindings. Its existing presentation workaround stays.
+
+Ownership and allocation remain unchanged: two FBOs per initialized layer and
+one shader compiled on the first transform. getTexture() is borrowed. No extra
+GPU resources, per-frame allocation, resource registry, pool or renderer exists.
+Native Lua teardown and the established mode-exit barrier remain the host's job.
+
+Evidence and limits
+The shipped tests/run_lua_tests.py runs the actual helper and minimal example in
+LuaJIT with OF stubs. It covers 26 lifecycle/failure cases, all supported sizes and
+cleanup/error behavior. The separate original regression compared accepted and
+migrated Markov traces for 5,400 frames and 12 reentries. These local tests do not
+establish driver resource retirement, pixels or cadence.
+
+The exact helper and Markov hashes in RELEASE-STATUS.txt passed a separate bounded
+720p hardware comparison, actual data-root resolution and six PERSIST-enabled
+reentries per version. The subsequent portable runtime passed a bounded packaged
+Markov smoke. Arbitrary custom shader nesting, all modes and injected failure paths
+are not thereby hardware-qualified. The final bounded integration checks are recorded in FINAL-QUALIFICATION.txt,
+including the cadence exception and unmeasured fresh GPU retirement. The helper's
+bytes and API 1.2 contract have not changed.

@@ -1,0 +1,8 @@
+Map data © OpenStreetMap contributors, available under ODbL 1.0.
+Source: https://www.openstreetmap.org/copyright
+License: https://opendatacommons.org/licenses/odbl/1-0/
+
+masst.dat is the supplied Massachusetts St, Lawrence, KS extract/geometry table.
+It remains under ODbL, including its share-alike terms, and is not relicensed BSD.
+The full supplied derived dataset is included here. Retain this notice when
+redistributing the dataset. Attribute OpenStreetMap in uses of the resulting map.

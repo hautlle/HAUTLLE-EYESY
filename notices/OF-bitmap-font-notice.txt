@@ -1,0 +1,40 @@
+// ==============================================================
+// this license below is from freeGlut, (freeglut_font_data.c)
+
+/*
+ * The legal status of this file is a bit vague.  The font glyphs
+ * themselves come from XFree86 v4.3.0 (as of this writing), and as
+ * part of the X server may be subject to the XFree86 copyrights.
+ * The original freeglut fonts were extracted by a utility written
+ * by Pawel W. Olszta (see below) and the generated fonts contained
+ * his copyright exclusively.  Steve Baker asserts that Pawel
+ * assigned intellectual property rights to Steve Baker.  Steve
+ * Baker also asserts that fonts cannot be copyrighted.  He has
+ * neither stripped the copyright from the freeglut fonts nor
+ * formally retitled anything in his name.  Since that time, the
+ * OpenGLUT project has branched from freeglut, and has made
+ * necessary modifications to Pawel's ``genfonts'' utility.
+ * To that extent, OpenGLUT may have some title to this file.
+ * What is fairly clear is that the font data is licensed under
+ * the XFree86 license (which is variously termed ``XFree'' and
+ * ``MIT'' by the freeglut project).  It is believed that all
+ * title holders wish this file to be as useful as possible, and
+ * that either the ``XFree'' or ``MIT'' license works.
+ *
+ * Portions copyright (c) 2004, the OpenGLUT project contributors.
+ * OpenGLUT branched from freeglut in February, 2004.
+ *
+ * Copyright (c) 1999-2000 by Pawel W. Olszta
+ * Written by Pawel W. Olszta, <olszta@sourceforge.net>
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Sotware.
+ */
+// ==============================================================

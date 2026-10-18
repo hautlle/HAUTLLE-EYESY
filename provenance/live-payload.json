@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "16b95d673229ad51887986f83b09cc63df04391bbabe4fb61eb3ce79b8cf8ef8",
+  "files": {
+    "modes/FRACSHAT_ARCHITECTURAL_GHOSTS_F2/core.lua": "33a5a98f0d9e01132df9ab812de8e02d822c1b717d81b2a364138e19b34d86c2",
+    "modes/FRACSHAT_ARCHITECTURAL_GHOSTS_F2/main.lua": "02e22cc789398491d45b64067ae341755d41f9798ccccb1ce3d6aa0edc85b240",
+    "modes/FRACSHAT_ARCHITECTURAL_GHOSTS_F2/region_pair.lua": "7fba6601ac0bc469444ea9439283ccbc4adc3e24b0c6b984d621c56264bda0e1",
+    "modes/GAUSSIAN GLITCH/main.lua": "dd9c8249579b2483915696bf01288e72aa946aa67ae537e28018de5efdc0e1d3",
+    "modes/HAUTLLE_ARCHITECTURE_02_STAGE4/main.lua": "3e7aa6f2dac9637ea5f6a0c37b9ffbc95e90c7b84605a1bb31379767f09e59f2",
+    "modes/HAUTLLE_BRAKHAGE_DRIFT_01/main.lua": "3889d1300376e8a1111b910888c0bb3742864e0bf4384709694fabb767d44b20",
+    "modes/HAUTLLE_FORMWERK_01/main.lua": "b4a92824b3e8f35fd78be8c7a1b92fd881202128d6f41b73c1a44e4f7ceb15a6",
+    "modes/HAUTLLE_INTERFERENCE_03/main.lua": "48d45fc129163db249fbc10be5ba5155c3ad9e5f99a8964ad146289786ab218f",
+    "modes/HAUTLLE_MARKOV_LIVE_720_V1/main.lua": "00697edcb61195528d6846563960189cd169f7fb352d571b1b82f1ce7c62fe0e",
+    "modes/HAUTLLE_MASST_WALK/main.lua": "becd4fad706affcd2c18e39b21a87076a098637541b245d22ba393158bcff241",
+    "modes/HAUTLLE_MASST_WALK/masst.dat": "eb30dc12064df01bca611a94bc4b6f1b1ac43283a6e67fd81bf19016ab0c3613",
+    "modes/HAUTLLE_MELTLOCK_01/main.lua": "f81503a7a8e8fce378fcf53888029b03a72b997f4042f6811a1d26a3973d6de1",
+    "modes/HAUTLLE_MURMURATION_05_FIELD/main.lua": "0674631021fc00227c72e1d604e47bfc6f59a5364f9bedda91598afb1b5cc55e",
+    "modes/HAUTLLE_RINGMOSH_VHS_V1/main.lua": "b1199e3d3b9d630e7d51a23ea4cea263011e51e15aa21403032a62f5e70a004f",
+    "modes/HAUTLLE_ROBOT_FIGHT_01/main.lua": "0e9c4f4c8ec9cdca5f45050f554d94fdb73cc7358b65a9fc7bca0b8ce0295a22",
+    "modes/HAUTLLE_VECTOR_IMPACT_01/main.lua": "f11d90d1889e6d59a5a37477e975928041fd37b98e461fa5aac262821d6fa7d9",
+    "modes/KCSC_RELIQUARY_01/logo.ply": "e3bcacf43a23e0e9615e967081782ff4b7d7002feb6d5d79656ffafa33686131",
+    "modes/KCSC_RELIQUARY_01/main.lua": "61b6eea6149d36ab3e9a3ea4cad5be1bbdf64a9330734f283a9e7da6659ee9bc",
+    "modes/KCSC_RELIQUARY_01/metal.frag": "0703216b144bbd2cad8cbd37a77f7c9274c99c1f0969570e4e5f7908b2ada3bf",
+    "modes/KCSC_RELIQUARY_01/metal.vert": "0001003f740f3f5dbc7a2b3c99f6f8940138a8b475e25c8224cfe347c1e6ed31",
+    "modes/SIGNAL_SEED_MICRO/main.lua": "fcfbae23dee0a11ae1b025cddbf13f3e26a8e3ca5541fb11ef4ea1641184dcde",
+    "modes/TERRAIN_MORPH/main.lua": "226b5e798a1b7fe70e31b0283debb1328b55b7333ee926ab5fef7193b844cedf",
+    "modules/eyesy.lua": "96c7fde47bf0026a3e95ce38cedc5adb8c9951abef13cf2aefdd6eab54782c3a",
+    "modules/ha_palette.lua": "4af9357515b60379297b370d3bf0944f67fa2f6181dd1abf7b20cf70eff04831"
+  },
+  "mode_count": 16
+}

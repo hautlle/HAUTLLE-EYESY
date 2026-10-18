@@ -1,0 +1,28 @@
+--- a/gl/ofFbo.cpp
++++ b/gl/ofFbo.cpp
+@@ -572,7 +572,7 @@
+ 	//currently depth only works if stencil is enabled. 
+ 	// http://forum.openframeworks.cc/index.php/topic,6837.0.html
+ #ifdef TARGET_OPENGLES
+-	// Honor explicit non-multisampled depth16 renderbuffers on GLES2.
++	// Honor explicit non-multisampled D16 requests on GLES2; physical storage is driver-selected.
+ 	// Keep the legacy stencil workaround for every other request.
+ 	const bool explicitDepth16Renderbuffer = _settings.useDepth
+ 		&& !_settings.useStencil && !_settings.depthStencilAsTexture
+@@ -717,9 +717,13 @@
+         glBindRenderbuffer(GL_RENDERBUFFER,previousRb);
+         const GLenum status=glCheckFramebufferStatus(GL_FRAMEBUFFER);
+         const GLenum error=glGetError();
+-        ofLogNotice("DEPTH16_CHECK") << "width=" << actualW << " height=" << actualH
+-          << " format=" << actualFormat << " depthBits=" << actualDepthBits << " stencilBits=" << actualStencilBits << " requestedFormat=" << settings.depthStencilInternalFormat << " depth=" << depthBuffer << " stencil=" << stencilBuffer
+-          << " status=" << status << " allocated=" << bIsAllocated << " error=" << error;
++        // Raw driver reports are diagnostic only; they do not establish physical packing or savings.
++        ofLogNotice("DEPTH16_CHECK") << "D16 requested; requestedFormat=" << settings.depthStencilInternalFormat
++          << " driverReportedWidth=" << actualW << " driverReportedHeight=" << actualH
++          << " driverReportedFormat=" << actualFormat << " driverReportedDepthBits=" << actualDepthBits
++          << " driverReportedStencilBits=" << actualStencilBits << " depthObject=" << depthBuffer << " stencilObject=" << stencilBuffer
++          << " framebufferStatus=" << status << " allocated=" << bIsAllocated << " queryBatchError=" << error
++          << " physicalStorage=unverified allocationBytes=unmeasured";
+     }
+ #endif
+ 

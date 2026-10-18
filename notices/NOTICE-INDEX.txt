@@ -1,0 +1,11 @@
+Third-party notices are retained verbatim in this directory and their source trees.
+engine-LICENSE.txt: existing Critter & Guitari engine BSD notice.
+openFrameworks-LICENSE.md: OF MIT notice, including supplied ofxOsc source.
+ofxLua-LICENSE.txt: ofxLua's upstream terms.
+oscpack-NOTICE.txt, GLM-0.9.9.7-copying.txt, json-LICENSE.MIT, utf8-NOTICE.txt:
+included vendor/header notices.
+kiss-COPYING.txt, tess2-LICENSE.txt: dependency/header notices.
+OF-bitmap-font-notice.txt: embedded OF glyph notice.
+ODbL-1.0.txt: MassSt's OpenStreetMap-derived data; see its adjacent NOTICE.txt.
+Apothecary reference license remains in build-support/dependency-provenance/.
+See docs/LICENSING.md for scope. No upstream source notice is removed.

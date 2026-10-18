@@ -1,0 +1,212 @@
+{
+  "schema": 1,
+  "status": "Public sources and patch verified; ARM rebuild and runtime untested",
+  "apothecary_commit": "9aab25d817033f7c10b4cecb8921a51a99023e56",
+  "sources": {
+    "kissfft/_kiss_fft_guts.h": {
+      "sha256": "6cb852500622172409927f3c1f7e83166aa94a842953a50c5be5af793913fd6c",
+      "upstream_sha256": "6cb852500622172409927f3c1f7e83166aa94a842953a50c5be5af793913fd6c",
+      "url": "https://raw.githubusercontent.com/mborgerding/kissfft/918336beac80868ad3011cb283063bb224e3e5da/_kiss_fft_guts.h",
+      "patched": false
+    },
+    "kissfft/COPYING": {
+      "sha256": "ddd1400f963747b305bfa39e21206e58805a1c650451e2ee5ce81ed86bc0b1ab",
+      "upstream_sha256": "ddd1400f963747b305bfa39e21206e58805a1c650451e2ee5ce81ed86bc0b1ab",
+      "url": "https://raw.githubusercontent.com/mborgerding/kissfft/918336beac80868ad3011cb283063bb224e3e5da/COPYING",
+      "patched": false
+    },
+    "kissfft/kiss_fft.c": {
+      "sha256": "f5d910af5294857807174e4eec2b30da3ac37bea8cab4cf0f15dfd4ba933ff31",
+      "upstream_sha256": "f5d910af5294857807174e4eec2b30da3ac37bea8cab4cf0f15dfd4ba933ff31",
+      "url": "https://raw.githubusercontent.com/mborgerding/kissfft/918336beac80868ad3011cb283063bb224e3e5da/kiss_fft.c",
+      "patched": false
+    },
+    "kissfft/kiss_fft.h": {
+      "sha256": "9cb0822143fb16b421ebcfba6f2e967d2363fc20c4dd1287b81cb8b517eea607",
+      "upstream_sha256": "9cb0822143fb16b421ebcfba6f2e967d2363fc20c4dd1287b81cb8b517eea607",
+      "url": "https://raw.githubusercontent.com/mborgerding/kissfft/918336beac80868ad3011cb283063bb224e3e5da/kiss_fft.h",
+      "patched": false
+    },
+    "kissfft/tools/kiss_fftr.c": {
+      "sha256": "00e59d0ace7f8f4a994ff52c643e2acfe467c3dcad0074d9e4cedb9410ed6ce5",
+      "upstream_sha256": "00e59d0ace7f8f4a994ff52c643e2acfe467c3dcad0074d9e4cedb9410ed6ce5",
+      "url": "https://raw.githubusercontent.com/mborgerding/kissfft/918336beac80868ad3011cb283063bb224e3e5da/tools/kiss_fftr.c",
+      "patched": false
+    },
+    "kissfft/tools/kiss_fftr.h": {
+      "sha256": "7e0b08c9e3238e06f63328973ebe0f1c2b620a77e8ef2a7e6ee9ba902e0bfa6e",
+      "upstream_sha256": "7e0b08c9e3238e06f63328973ebe0f1c2b620a77e8ef2a7e6ee9ba902e0bfa6e",
+      "url": "https://raw.githubusercontent.com/mborgerding/kissfft/918336beac80868ad3011cb283063bb224e3e5da/tools/kiss_fftr.h",
+      "patched": false
+    },
+    "libtess2/Include/tesselator.h": {
+      "sha256": "4e77e1fb6c679418f6a8facc018ff297078467856761cff616d283469b1b6c22",
+      "upstream_sha256": "0a5579d5df05b3d27e05a8db65d4e451126b73d42579bcdf7fe232fae607a03b",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Include/tesselator.h",
+      "patched": true
+    },
+    "libtess2/LICENSE.txt": {
+      "sha256": "582c43ef2eb5aba92c6fb92913194a966989ffb044aef5dee0e37590029a86a5",
+      "upstream_sha256": "582c43ef2eb5aba92c6fb92913194a966989ffb044aef5dee0e37590029a86a5",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/LICENSE.txt",
+      "patched": false
+    },
+    "libtess2/Source/bucketalloc.c": {
+      "sha256": "44c720076808c7cd9921eb7638a5e27c3adddf267383afb49843cd2b03362bfc",
+      "upstream_sha256": "44c720076808c7cd9921eb7638a5e27c3adddf267383afb49843cd2b03362bfc",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/bucketalloc.c",
+      "patched": false
+    },
+    "libtess2/Source/bucketalloc.h": {
+      "sha256": "024e5e198f94947f9fbc923ce38a693f49efa0d7f7af69e5010c08d1970086f3",
+      "upstream_sha256": "024e5e198f94947f9fbc923ce38a693f49efa0d7f7af69e5010c08d1970086f3",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/bucketalloc.h",
+      "patched": false
+    },
+    "libtess2/Source/dict.c": {
+      "sha256": "c5834e7977b95d37be41218b8591b5d93cad46e03c551f8036ce4010c882033d",
+      "upstream_sha256": "c5834e7977b95d37be41218b8591b5d93cad46e03c551f8036ce4010c882033d",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/dict.c",
+      "patched": false
+    },
+    "libtess2/Source/dict.h": {
+      "sha256": "98c66a03e74ad65e9d647511a970acd117b547f179ab5368044013b992798593",
+      "upstream_sha256": "98c66a03e74ad65e9d647511a970acd117b547f179ab5368044013b992798593",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/dict.h",
+      "patched": false
+    },
+    "libtess2/Source/geom.c": {
+      "sha256": "4c774f1efa3c576b00f5e69578f64c55434dfa670ac91227e31ccd7fbbf12e00",
+      "upstream_sha256": "4c774f1efa3c576b00f5e69578f64c55434dfa670ac91227e31ccd7fbbf12e00",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/geom.c",
+      "patched": false
+    },
+    "libtess2/Source/geom.h": {
+      "sha256": "f90893bfe3a24f73bfb92347f5159ffe3117dad8c751ea25fad706fb5640cf51",
+      "upstream_sha256": "f90893bfe3a24f73bfb92347f5159ffe3117dad8c751ea25fad706fb5640cf51",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/geom.h",
+      "patched": false
+    },
+    "libtess2/Source/mesh.c": {
+      "sha256": "be9ebedb88748022e9cc4b2816f04067110a139e8ffadcaa118aba805346e6dd",
+      "upstream_sha256": "be9ebedb88748022e9cc4b2816f04067110a139e8ffadcaa118aba805346e6dd",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/mesh.c",
+      "patched": false
+    },
+    "libtess2/Source/mesh.h": {
+      "sha256": "eaaf976b8ec8306bcd70b86da7f273a2fcd6f16de86ab28cdb5137b6578f6e9b",
+      "upstream_sha256": "eaaf976b8ec8306bcd70b86da7f273a2fcd6f16de86ab28cdb5137b6578f6e9b",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/mesh.h",
+      "patched": false
+    },
+    "libtess2/Source/priorityq.c": {
+      "sha256": "155f09e8207dcde1522e3203e27fec39549d8bde58aec395124312a7de3b4613",
+      "upstream_sha256": "155f09e8207dcde1522e3203e27fec39549d8bde58aec395124312a7de3b4613",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/priorityq.c",
+      "patched": false
+    },
+    "libtess2/Source/priorityq.h": {
+      "sha256": "019ef7515a59828c7acda13329bdf12ca18b5669298a5c5df18ac771f945ac00",
+      "upstream_sha256": "019ef7515a59828c7acda13329bdf12ca18b5669298a5c5df18ac771f945ac00",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/priorityq.h",
+      "patched": false
+    },
+    "libtess2/Source/sweep.c": {
+      "sha256": "d645cbb29c5887f8183730015bcebf04845b86f20faff8c09f0d3058628c575c",
+      "upstream_sha256": "d645cbb29c5887f8183730015bcebf04845b86f20faff8c09f0d3058628c575c",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/sweep.c",
+      "patched": false
+    },
+    "libtess2/Source/sweep.h": {
+      "sha256": "a53d039fe6601e3259f0a0dd9e13b5e19e49164b5e903e43b4cd66c93de9c008",
+      "upstream_sha256": "a53d039fe6601e3259f0a0dd9e13b5e19e49164b5e903e43b4cd66c93de9c008",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/sweep.h",
+      "patched": false
+    },
+    "libtess2/Source/tess.c": {
+      "sha256": "09ebf7c66f270c1331fdd0a0fb12dc6197415bd959f91bb20936e2011ea7361c",
+      "upstream_sha256": "29342d4e0f5288c73eda9e1132d24d5d1c8a34fc71f438317104289bc1df89f7",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/tess.c",
+      "patched": true
+    },
+    "libtess2/Source/tess.h": {
+      "sha256": "f27fe0b67961ab4d4ce9e0aed7d4dcc02b8e754c95a2eaf65f7038ffc51f52ac",
+      "upstream_sha256": "f27fe0b67961ab4d4ce9e0aed7d4dcc02b8e754c95a2eaf65f7038ffc51f52ac",
+      "url": "https://raw.githubusercontent.com/memononen/libtess2/24e4bdd4158909e9720422208ab0a0aca788e700/Source/tess.h",
+      "patched": false
+    }
+  },
+  "reference_files": {
+    "apothecary/formulas/kiss/kiss.sh": {
+      "sha256": "256e29418d5f593b69c0113500163b7eedd1b315c1dd15fb0869ff6bd77afdf7",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/apothecary/formulas/kiss/kiss.sh"
+    },
+    "apothecary/formulas/kiss/Makefile": {
+      "sha256": "3d7154f80c534a0d197905dc33a72dce083883b4d9b6a116898d6aaa8b81847b",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/apothecary/formulas/kiss/Makefile"
+    },
+    "apothecary/formulas/tess2/Makefile": {
+      "sha256": "92e2ca704f5e31649b3836253ae36622b529947f2dfe35256d73e1234883ccff",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/apothecary/formulas/tess2/Makefile"
+    },
+    "apothecary/formulas/tess2/tess2.make": {
+      "sha256": "f91e52c13cf7147c6b1bc2a9a383407b464654474cf431600e20172733d22202",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/apothecary/formulas/tess2/tess2.make"
+    },
+    "apothecary/formulas/tess2/tess2.patch": {
+      "sha256": "0db16d1cda7e8d055223c01428bc828b1d99e7689674a1aa49cd9724c45e9641",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/apothecary/formulas/tess2/tess2.patch"
+    },
+    "apothecary/formulas/tess2/tess2.sh": {
+      "sha256": "7bbfbcf9b61fed6d3f378fbe12ed749ceb4518285a65e8f8bb4e4f8b6439b5cb",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/apothecary/formulas/tess2/tess2.sh"
+    },
+    "apothecary/linuxarmv6l_configure.sh": {
+      "sha256": "cd8624bf90d43e4e7dfbae9d8e15dd65e03756e28375152ff15400845a94187c",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/apothecary/linuxarmv6l_configure.sh"
+    },
+    "apothecary-LICENSE.md": {
+      "sha256": "feb3a1576a81690e2c1ef38c1f4e6308f0985634c8c31c8417e3610b9fc998b2",
+      "url": "https://raw.githubusercontent.com/openframeworks/apothecary/9aab25d817033f7c10b4cecb8921a51a99023e56/LICENSE.md"
+    }
+  },
+  "header_matches": [
+    {
+      "public": "kissfft/kiss_fft.h",
+      "captured": "kiss/include/kiss_fft.h",
+      "exact_match": true,
+      "public_sha256": "9cb0822143fb16b421ebcfba6f2e967d2363fc20c4dd1287b81cb8b517eea607",
+      "captured_sha256": "9cb0822143fb16b421ebcfba6f2e967d2363fc20c4dd1287b81cb8b517eea607"
+    },
+    {
+      "public": "kissfft/tools/kiss_fftr.h",
+      "captured": "kiss/include/kiss_fftr.h",
+      "exact_match": true,
+      "public_sha256": "7e0b08c9e3238e06f63328973ebe0f1c2b620a77e8ef2a7e6ee9ba902e0bfa6e",
+      "captured_sha256": "7e0b08c9e3238e06f63328973ebe0f1c2b620a77e8ef2a7e6ee9ba902e0bfa6e"
+    },
+    {
+      "public": "kissfft/COPYING",
+      "captured": "kiss/license/COPYING",
+      "exact_match": true,
+      "public_sha256": "ddd1400f963747b305bfa39e21206e58805a1c650451e2ee5ce81ed86bc0b1ab",
+      "captured_sha256": "ddd1400f963747b305bfa39e21206e58805a1c650451e2ee5ce81ed86bc0b1ab"
+    },
+    {
+      "public": "libtess2/Include/tesselator.h",
+      "captured": "tess2/include/tesselator.h",
+      "exact_match": true,
+      "public_sha256": "4e77e1fb6c679418f6a8facc018ff297078467856761cff616d283469b1b6c22",
+      "captured_sha256": "4e77e1fb6c679418f6a8facc018ff297078467856761cff616d283469b1b6c22"
+    },
+    {
+      "public": "libtess2/LICENSE.txt",
+      "captured": "tess2/license/LICENSE.txt",
+      "exact_match": true,
+      "public_sha256": "582c43ef2eb5aba92c6fb92913194a966989ffb044aef5dee0e37590029a86a5",
+      "captured_sha256": "582c43ef2eb5aba92c6fb92913194a966989ffb044aef5dee0e37590029a86a5"
+    }
+  ],
+  "original_archive_compiler_comments": "GCC: (GNU) 6.3.0",
+  "original_archive_build_flags_recovered": false
+}

@@ -1,0 +1,22 @@
+--- a/HAUTLLE_MARKOV_LIVE_720_V1/main.lua
++++ b/HAUTLLE_MARKOV_LIVE_720_V1/main.lua
+@@ -248,7 +248,7 @@
+         S.hue=(.13+rnd()*.37)%1;S.rng=33+variant*17
+         for i=1,4 do S.kernel[i]={1,1,1,1} end
+         S.bias={uniform(-.15,.35),uniform(-.15,.35)};spawn()
+-        local modulePath='/home/pi/hautlle-markov-live720-20261016/frozen_layer_pair.lua'
++        local modulePath=of.toDataPath('lua/hautlle/v1/frozen_layer_pair.lua',true)
+         local module=dofile(modulePath)
+         assert(module.API_VERSION==1,'Unsupported frozen-layer API')
+         log('shared helper: '..modulePath..' API_VERSION='..tostring(module.API_VERSION))
+--- a/KCSC_RELIQUARY_01/main.lua
++++ b/KCSC_RELIQUARY_01/main.lua
+@@ -48,7 +48,7 @@
+         if target:getDepthBuffer()==0 then error('depth renderbuffer missing') end
+         last=of.getElapsedTimef();t=0;fast=0;slow=0;hit=0;gate=0;previousTrigger=false
+         ready=true
+-        print('KCSC_RELIQUARY_01 READY: '..vertexCount..' vertices; 960x540 RGBA + depth16; GPU timing unverified')
++        print('KCSC_RELIQUARY_01 READY: '..vertexCount..' vertices; 960x540 RGBA + D16 requested; physical storage and GPU cost unverified')
+     end)
+     if not ok then print('KCSC_RELIQUARY_01 FAILED: '..tostring(err));release() end
+ end

@@ -1,0 +1,23 @@
+{
+  "base_plan_sha256": "7a16e79c00604fff561a9f2daf6e389c7383fecf30b2c67bfcf21fc1d12b2bce",
+  "brief_runtime": "Markov-Ghosts-Markov passed with PERSIST and injected OSC knobs",
+  "build": "resumed_94_verified_partial_objects_plus_1_identical_binding_plus_2_new_compiles",
+  "date": "2026-10-18",
+  "engine_units": 97,
+  "installer_end_to_end": false,
+  "linked_binary_sha256": "47f1d7b85e04b9b66e53541235da51f890c934c7cd4e4b014343fed497cfb4e1",
+  "live_modes": 16,
+  "new_builds": 0,
+  "new_extended_test_suites": 0,
+  "odbl_text_sha256": "607680718977f6f6c9607972afd98f208573f19251315ed1362a8589b51beaf5",
+  "odbl_text_url": "https://opendatacommons.org/licenses/odbl/odbl-10.txt",
+  "original_native_source_and_runtime_data_preserved": true,
+  "physical_recorder": "confirmed_by_user_2026-10-18",
+  "prior_focused_tests": {
+    "controller": 8,
+    "recipe_resource_installer": 97
+  },
+  "public_dependency_licenses": "Retained upstream; MassSt map data ODbL",
+  "source_files": 650,
+  "source_manifest_sha256": "52b335369c32a8862ce042dac2f8693af225b76233bb0fcd5fcd70962afb16bd"
+}

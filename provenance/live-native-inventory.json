@@ -1,0 +1,492 @@
+{
+  "additional_remove_candidate": "app/src/generators/AsciiQuestTuning.h (included only by AsciiQuestV2Generator.cpp)",
+  "compiled_generators": 27,
+  "current_build_units": 114,
+  "keep": [
+    "ArchitectureGenerator",
+    "BauhausFormGenerator",
+    "LowResShaderHostGenerator",
+    "MarkovMoshGenerator",
+    "MassStWalkGenerator",
+    "MeltLockGenerator",
+    "MurmurationFieldGenerator",
+    "RobotFightGenerator",
+    "ShaderHostGenerator",
+    "VectorImpactGenerator"
+  ],
+  "limits": [
+    "Static transitive trace, not a reduced-build or hardware pass.",
+    "Keep OF/Lua/GLM/OSC/KnobRecorder/audio/OSD and current dependency libraries; library pruning is not established.",
+    "Dynamic global access resolves to controls/audio/persist/trig, not generator names; optional externally injected FRACSHAT_HOST callbacks are outside captured default mode closure.",
+    "ha_palette.lua and frozen_layer.lua are installed but not reachable from the captured live modes; do not conflate unused helpers with native generator deletion.",
+    "Existing mode-local backup files are not entrypoints or require/dofile targets.",
+    "No runtime changes, builds, mode switches, deletion or deployment."
+  ],
+  "mode_count": 16,
+  "mode_map": [
+    {
+      "generators": {},
+      "helpers": [
+        "mode-local/core.lua",
+        "mode-local/region_pair.lua"
+      ],
+      "name": "FRACSHAT_ARCHITECTURAL_GHOSTS_F2",
+      "samplers": [
+        "previousImage"
+      ],
+      "sources": [
+        {
+          "path": "FRACSHAT_ARCHITECTURAL_GHOSTS_F2/core.lua",
+          "sha256": "33a5a98f0d9e01132df9ab812de8e02d822c1b717d81b2a364138e19b34d86c2"
+        },
+        {
+          "path": "FRACSHAT_ARCHITECTURAL_GHOSTS_F2/main.lua",
+          "sha256": "02e22cc789398491d45b64067ae341755d41f9798ccccb1ce3d6aa0edc85b240"
+        },
+        {
+          "path": "FRACSHAT_ARCHITECTURAL_GHOSTS_F2/region_pair.lua",
+          "sha256": "7fba6601ac0bc469444ea9439283ccbc4adc3e24b0c6b984d621c56264bda0e1"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "LowResShaderHostGenerator": [
+          "shaderlow_draw",
+          "shaderlow_load",
+          "shaderlow_reset",
+          "shaderlow_scale",
+          "shaderlow_step"
+        ],
+        "ShaderHostGenerator": [
+          "shaderhost_feedback_enable"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "GAUSSIAN GLITCH",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "GAUSSIAN GLITCH/main.lua",
+          "sha256": "dd9c8249579b2483915696bf01288e72aa946aa67ae537e28018de5efdc0e1d3"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "ArchitectureGenerator": [
+          "architecture_draw",
+          "architecture_is_ready",
+          "architecture_reset",
+          "architecture_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_ARCHITECTURE_02_STAGE4",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "HAUTLLE_ARCHITECTURE_02_STAGE4/main.lua",
+          "sha256": "3e7aa6f2dac9637ea5f6a0c37b9ffbc95e90c7b84605a1bb31379767f09e59f2"
+        }
+      ]
+    },
+    {
+      "generators": {},
+      "helpers": [],
+      "name": "HAUTLLE_BRAKHAGE_DRIFT_01",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "HAUTLLE_BRAKHAGE_DRIFT_01/main.lua",
+          "sha256": "3889d1300376e8a1111b910888c0bb3742864e0bf4384709694fabb767d44b20"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "BauhausFormGenerator": [
+          "bauhaus_prepare",
+          "bauhaus_step"
+        ],
+        "ShaderHostGenerator": [
+          "shaderhost_draw",
+          "shaderhost_feedback_clear",
+          "shaderhost_feedback_enable",
+          "shaderhost_load",
+          "shaderhost_reset",
+          "shaderhost_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_FORMWERK_01",
+      "samplers": [
+        "u_bauhausTex",
+        "u_prevFrame"
+      ],
+      "sources": [
+        {
+          "path": "HAUTLLE_FORMWERK_01/main.lua",
+          "sha256": "b4a92824b3e8f35fd78be8c7a1b92fd881202128d6f41b73c1a44e4f7ceb15a6"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "MarkovMoshGenerator": [
+          "markovmosh_reset",
+          "markovmosh_step"
+        ],
+        "ShaderHostGenerator": [
+          "shaderhost_draw",
+          "shaderhost_load",
+          "shaderhost_reset",
+          "shaderhost_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_INTERFERENCE_03",
+      "samplers": [
+        "u_markovMoshTex"
+      ],
+      "sources": [
+        {
+          "path": "HAUTLLE_INTERFERENCE_03/main.lua",
+          "sha256": "48d45fc129163db249fbc10be5ba5155c3ad9e5f99a8964ad146289786ab218f"
+        }
+      ]
+    },
+    {
+      "generators": {},
+      "helpers": [
+        "runtime-data/lua/hautlle/v1/frozen_layer_pair.lua"
+      ],
+      "name": "HAUTLLE_MARKOV_LIVE_720_V1",
+      "samplers": [
+        "previousImage"
+      ],
+      "sources": [
+        {
+          "path": "HAUTLLE_MARKOV_LIVE_720_V1/main.lua",
+          "sha256": "00697edcb61195528d6846563960189cd169f7fb352d571b1b82f1ce7c62fe0e"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "MassStWalkGenerator": [
+          "masst_draw",
+          "masst_load",
+          "masst_reset",
+          "masst_stats",
+          "masst_step"
+        ],
+        "ShaderHostGenerator": [
+          "shaderhost_feedback_enable"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_MASST_WALK",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "HAUTLLE_MASST_WALK/main.lua",
+          "sha256": "becd4fad706affcd2c18e39b21a87076a098637541b245d22ba393158bcff241"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "MeltLockGenerator": [
+          "meltlock_prepare",
+          "meltlock_step"
+        ],
+        "ShaderHostGenerator": [
+          "shaderhost_draw",
+          "shaderhost_feedback_enable",
+          "shaderhost_load",
+          "shaderhost_reset",
+          "shaderhost_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_MELTLOCK_01",
+      "samplers": [
+        "u_meltlockTex",
+        "u_prevFrame"
+      ],
+      "sources": [
+        {
+          "path": "HAUTLLE_MELTLOCK_01/main.lua",
+          "sha256": "f81503a7a8e8fce378fcf53888029b03a72b997f4042f6811a1d26a3973d6de1"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "MurmurationFieldGenerator": [
+          "murmfield_draw",
+          "murmfield_is_ready",
+          "murmfield_prepare",
+          "murmfield_release",
+          "murmfield_reset",
+          "murmfield_stats",
+          "murmfield_step"
+        ],
+        "ShaderHostGenerator": [
+          "shaderhost_feedback_enable"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_MURMURATION_05_FIELD",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "HAUTLLE_MURMURATION_05_FIELD/main.lua",
+          "sha256": "0674631021fc00227c72e1d604e47bfc6f59a5364f9bedda91598afb1b5cc55e"
+        }
+      ]
+    },
+    {
+      "generators": {},
+      "helpers": [],
+      "name": "HAUTLLE_RINGMOSH_VHS_V1",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "HAUTLLE_RINGMOSH_VHS_V1/main.lua",
+          "sha256": "b1199e3d3b9d630e7d51a23ea4cea263011e51e15aa21403032a62f5e70a004f"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "RobotFightGenerator": [
+          "fight_draw",
+          "fight_is_ready",
+          "fight_reset",
+          "fight_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_ROBOT_FIGHT_01",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "HAUTLLE_ROBOT_FIGHT_01/main.lua",
+          "sha256": "0e9c4f4c8ec9cdca5f45050f554d94fdb73cc7358b65a9fc7bca0b8ce0295a22"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "ShaderHostGenerator": [
+          "shaderhost_feedback_enable"
+        ],
+        "VectorImpactGenerator": [
+          "vectorimpact_draw",
+          "vectorimpact_prepare",
+          "vectorimpact_reset",
+          "vectorimpact_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "HAUTLLE_VECTOR_IMPACT_01",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "HAUTLLE_VECTOR_IMPACT_01/main.lua",
+          "sha256": "f11d90d1889e6d59a5a37477e975928041fd37b98e461fa5aac262821d6fa7d9"
+        }
+      ]
+    },
+    {
+      "generators": {},
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "KCSC_RELIQUARY_01",
+      "samplers": [],
+      "sources": [
+        {
+          "path": "KCSC_RELIQUARY_01/main.lua",
+          "sha256": "61b6eea6149d36ab3e9a3ea4cad5be1bbdf64a9330734f283a9e7da6659ee9bc"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "ShaderHostGenerator": [
+          "shaderhost_draw",
+          "shaderhost_feedback_enable",
+          "shaderhost_load",
+          "shaderhost_reset",
+          "shaderhost_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "SIGNAL_SEED_MICRO",
+      "samplers": [
+        "u_prevFrame"
+      ],
+      "sources": [
+        {
+          "path": "SIGNAL_SEED_MICRO/main.lua",
+          "sha256": "fcfbae23dee0a11ae1b025cddbf13f3e26a8e3ca5541fb11ef4ea1641184dcde"
+        }
+      ]
+    },
+    {
+      "generators": {
+        "ShaderHostGenerator": [
+          "shaderhost_draw",
+          "shaderhost_feedback_enable",
+          "shaderhost_load",
+          "shaderhost_reset",
+          "shaderhost_step"
+        ]
+      },
+      "helpers": [
+        "lua-search-path/eyesy.lua"
+      ],
+      "name": "TERRAIN_MORPH",
+      "samplers": [
+        "u_prevFrame"
+      ],
+      "sources": [
+        {
+          "path": "TERRAIN_MORPH/main.lua",
+          "sha256": "226b5e798a1b7fe70e31b0283debb1328b55b7333ee926ab5fef7193b844cedf"
+        }
+      ]
+    }
+  ],
+  "plan_sha256": "1edb793f2ec1e617bb0e3846e53911f132ca298fd05092e7f9770789978801ad",
+  "projected_build_units": 97,
+  "registered_current": 26,
+  "remove_candidates": [
+    "AsciiQuestGenerator",
+    "AsciiQuestV2Generator",
+    "CorridorColumnGenerator",
+    "FieldSeedGenerator",
+    "KcscLogoGlitchGenerator",
+    "LineFieldGenerator",
+    "LineFieldV11Generator",
+    "LineFieldV12Generator",
+    "LineFieldV20Generator",
+    "LineFieldV22Generator",
+    "MorphCloudGenerator",
+    "MurmurationGenerator",
+    "MurmurationSkyGenerator",
+    "TemporalBusGenerator",
+    "TerrainGenerator",
+    "WesternWaveformsIntroGenerator",
+    "WizardGameGenerator"
+  ],
+  "required_mode_assets": [
+    {
+      "bytes": 9975,
+      "path": "HAUTLLE_MASST_WALK/masst.dat",
+      "sha256": "eb30dc12064df01bca611a94bc4b6f1b1ac43283a6e67fd81bf19016ab0c3613"
+    },
+    {
+      "bytes": 757874,
+      "path": "KCSC_RELIQUARY_01/logo.ply",
+      "sha256": "e3bcacf43a23e0e9615e967081782ff4b7d7002feb6d5d79656ffafa33686131"
+    },
+    {
+      "bytes": 1518,
+      "path": "KCSC_RELIQUARY_01/metal.frag",
+      "sha256": "0703216b144bbd2cad8cbd37a77f7c9274c99c1f0969570e4e5f7908b2ada3bf"
+    },
+    {
+      "bytes": 1120,
+      "path": "KCSC_RELIQUARY_01/metal.vert",
+      "sha256": "0001003f740f3f5dbc7a2b3c99f6f8940138a8b475e25c8224cfe347c1e6ed31"
+    }
+  ],
+  "runtime_binary_sha256": "0fadbeecaf602a63619297ce8e90aae3ffb798b2229618a47add4375503cf0c0",
+  "schema": 1,
+  "shared_lua": [
+    {
+      "path": "lua-search-path/eyesy.lua",
+      "reachable": true,
+      "sha256": "96c7fde47bf0026a3e95ce38cedc5adb8c9951abef13cf2aefdd6eab54782c3a"
+    },
+    {
+      "path": "lua-search-path/ha_palette.lua",
+      "reachable": false,
+      "sha256": "4af9357515b60379297b370d3bf0944f67fa2f6181dd1abf7b20cf70eff04831"
+    },
+    {
+      "path": "runtime-data/lua/hautlle/v1/frozen_layer.lua",
+      "reachable": false,
+      "sha256": "60cf139916a5c6f8e1eee3b20fde51815cc886fc39a1eb8476d33be90a822cec"
+    },
+    {
+      "path": "runtime-data/lua/hautlle/v1/frozen_layer_pair.lua",
+      "reachable": true,
+      "sha256": "05d1c9e7f24de7f9092c06ac16a8f5e71c0ae4f4d556e31dd23552a9c362b11d"
+    }
+  ],
+  "source_manifest_sha256": "e53679df871016f2695b10a89ab9e5fd997147dada37ce4d43a00bf7d1d9a69a",
+  "status": "captured_16_mode_source_and_asset_set_included",
+  "texture_bindings": [
+    {
+      "consumers": [
+        "HAUTLLE_FORMWERK_01"
+      ],
+      "decision": "KEEP",
+      "provider": "BauhausFormGenerator",
+      "uniform": "u_bauhausTex"
+    },
+    {
+      "consumers": [
+        "HAUTLLE_MELTLOCK_01"
+      ],
+      "decision": "KEEP",
+      "provider": "MeltLockGenerator",
+      "uniform": "u_meltlockTex"
+    },
+    {
+      "consumers": [
+        "HAUTLLE_INTERFERENCE_03"
+      ],
+      "decision": "KEEP",
+      "provider": "MarkovMoshGenerator",
+      "uniform": "u_markovMoshTex"
+    },
+    {
+      "consumers": [],
+      "decision": "REMOVE_BINDING_WITH_PROVIDER",
+      "provider": "CorridorColumnGenerator",
+      "uniform": "u_corridorTex"
+    },
+    {
+      "consumers": [],
+      "decision": "REMOVE_BINDING_WITH_PROVIDER",
+      "provider": "MorphCloudGenerator",
+      "uniform": "u_morphCloudTex"
+    }
+  ]
+}
