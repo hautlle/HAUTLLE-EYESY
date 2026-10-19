@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-19",
+  "files": [
+    {
+      "after_sha256": "353b3c200334301c900c417b4ccd676e5ff61aa7d9aec56504ba8e70343442f7",
+      "before_sha256": "7c4eef7bb8573a7ae6e4676c003e06878963634b92a580580c08885e1b7f2ca0",
+      "path": "web/cpapp.py"
+    },
+    {
+      "after_sha256": "225361b2cceb34d9ae2636a319275b5f77e5028b025aeee19ae622dea03bb930",
+      "before_sha256": "23c6da29d954744baad86077ca46e663b861fffa8ac5e7527f3822bdcecd991e",
+      "path": "web/static/app.js"
+    },
+    {
+      "after_sha256": "53f58df5db11a140736acbadb51608c87e9cde763f70dd0f8f5821d387ee5465",
+      "before_sha256": "bcf2d8d54986a0c25a992e1a0b39926de201bd70452313c6477b74769a71559a",
+      "path": "web/static/app.html"
+    }
+  ],
+  "installer_transaction_hardware_qualified": false,
+  "javascript_validation": "Actual final app.js with mocked requests: displayed file, dirty state, invalid paths, save races, errors",
+  "local_transaction_fixtures": 14,
+  "mode_cleanup_automated": false,
+  "new_builds": 0,
+  "new_device_calls": 0,
+  "payload": "Exact separately installed and verified stock CherryPy additions with final button styling",
+  "profile": "beta-20211213",
+  "runtime_validation": "HTTP editor/JS hashes; selector lists 16 modes; same-active-mode POST reached renderer; Settings retained; peer PIDs unchanged",
+  "styling_validation": "Local script-free browser render; final served HTML hash verified"
+}

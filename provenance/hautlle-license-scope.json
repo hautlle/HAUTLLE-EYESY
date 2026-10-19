@@ -1,6 +1,7 @@
 {
   "change_only_patches": [
     "patches/beta-recorder-routing.patch",
+    "patches/beta-web-controls.patch",
     "patches/core-depth-wording.patch",
     "patches/mode-loader-and-depth-wording.patch"
   ],
@@ -19,7 +20,9 @@
     "FROZEN-LAYER-API.txt",
     "README.md",
     "build-support/beta-controller.json",
+    "build-support/beta-web.json",
     "build-support/beta_controller.py",
+    "build-support/beta_web.py",
     "build-support/build.py",
     "build-support/build_resources.py",
     "build-support/dependencies.json",
@@ -36,6 +39,7 @@
     "docs/SETUP.md",
     "docs/SUPPORTED-MODES.md",
     "docs/VALIDATION.md",
+    "docs/WEB-CONTROLS.md",
     "examples/FROZEN_LAYER_PAIR_MINIMAL/main.lua",
     "examples/HAUTLLE_MARKOV_LIVE_720_V1/README.txt",
     "examples/HAUTLLE_MARKOV_LIVE_720_V1/main.lua",
@@ -66,6 +70,7 @@
     "provenance/controls-cpu.json",
     "provenance/live-native-inventory.json",
     "provenance/release.json",
+    "provenance/web-controls.json",
     "source/app/bin/data/lua/hautlle/v1/frozen_layer.lua",
     "source/app/bin/data/lua/hautlle/v1/frozen_layer_pair.lua",
     "tests/controls_fixture.cpp",
@@ -76,6 +81,8 @@
     "tests/run_lua_tests.py",
     "tests/test_beta_controller.py",
     "tests/test_beta_profile.py",
+    "tests/test_beta_web.py",
+    "tests/test_beta_web_actions.js",
     "tests/test_build_recipe.py",
     "tests/test_build_resources.py",
     "tests/test_installer.py",

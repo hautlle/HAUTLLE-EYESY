@@ -12,6 +12,8 @@ Built with openFrameworks and Lua, by [HAUTLLE](https://hautlle.com).
   to Architectural Ghosts.
 - **[Record knob movement](docs/CONTROLLER.md)** — with the recorder option
   enabled, hold Shift, move a knob, then release Shift to replay.
+- **[Load modes from the editor](docs/WEB-CONTROLS.md)** — add Modes and Load this
+  mode to the stock beta web interface, with Settings preserved.
 - **[Make your own visuals](docs/DEVELOPMENT.md)** — build on the shared toolkit
   and [frozen-layer Lua API](FROZEN-LAYER-API.txt).
 

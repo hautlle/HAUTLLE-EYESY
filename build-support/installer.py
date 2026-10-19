@@ -1029,7 +1029,7 @@ class Installer:
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', nargs='?', default='prepare', choices=['prepare', 'check', 'activate', 'rollback','cleanup-build',
-                        'controller-check','controller-apply','controller-rollback'])
+                        'controller-check','controller-apply','controller-rollback','web-check','web-apply','web-rollback'])
     parser.add_argument('--dry-run', action='store_true', help='Read-only prerequisite/plan check; no build or service changes')
     parser.add_argument('--profile', choices=['auto', CUSTOM, BETA], default='auto',
                         help='Reviewed custom pi or inspected 20211213 beta profile; stock OS3 is unsupported')
@@ -1039,6 +1039,11 @@ def main(argv=None):
                         help='Explicitly permit one temporary 1 GiB swap file for guarded preparation; requires sdcard workspace')
     args = parser.parse_args(argv)
     try:
+        if args.action.startswith('web-'):
+            require(not args.temporary_swap and args.workspace is None and args.profile in ('auto',BETA),
+                    'Web actions are a separate beta-only step; omit build/workspace options.')
+            action=args.action[len('web-'):]
+            return support_module('beta_web').main('check' if args.dry_run else action)
         if args.action.startswith('controller-'):
             require(not args.temporary_swap and args.workspace is None and args.profile in ('auto',BETA),
                     'Controller actions are a separate beta-only step; omit build/workspace options.')

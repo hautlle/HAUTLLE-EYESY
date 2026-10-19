@@ -1,0 +1,166 @@
+--- a/web/cpapp.py
++++ b/web/cpapp.py
+@@ -1,3 +1,4 @@
++import cgi
+ import os.path
+ current_dir = os.path.dirname(os.path.abspath(__file__))
+ import time
+@@ -44,6 +45,47 @@
+             if os.path.isdir(os.path.join(dir, name))]
+ 
+ class Root():
++
++    # Adapted from recovered HAUTLLE app.py modes_page/mode_set.
++    # Inline page; no custom static frontend or Flask dependency.
++    def _hautlle_mode_paths(self):
++        root = '/sdcard/Modes/oFLua'
++        paths = []
++        for name in sorted(os.listdir(root)):
++            directory = os.path.join(root, name)
++            main = os.path.join(directory, 'main.lua')
++            if (os.path.isdir(directory) and not os.path.islink(directory)
++                    and os.path.isfile(main) and not os.path.islink(main)):
++                paths.append((name, main))
++        return paths
++
++    def modes(self):
++        if cherrypy.request.method != 'GET':
++            raise cherrypy.HTTPError(405, 'Use GET')
++        rows = []
++        for name, main in self._hautlle_mode_paths():
++            safe_name = cgi.escape(name, quote=True)
++            safe_main = cgi.escape(main, quote=True)
++            rows.append('<form method="post" action="/mode_set" target="sink" style="margin:0 0 1em 0">'
++                        '<input type="hidden" name="mode" value="' + safe_main + '">'
++                        '<button type="submit">Load</button> <b>' + safe_name + '</b><br>'
++                        '<code>' + safe_main + '</code></form>')
++        body = '<h2>OF/Lua Modes</h2>' + ''.join(rows) + '<iframe name="sink" style="display:none"></iframe>'
++        cherrypy.response.headers['Content-Type'] = 'text/html; charset=utf-8'
++        return '<!doctype html><html><body style="background:#111;color:#eee;font-family:monospace;padding:20px">' + body + '</body></html>'
++    modes.exposed = True
++
++    def mode_set(self, mode=''):
++        if cherrypy.request.method != 'POST':
++            raise cherrypy.HTTPError(405, 'Use POST')
++        if not mode or mode not in [path for name, path in self._hautlle_mode_paths()]:
++            raise cherrypy.HTTPError(400, 'Unknown live mode')
++        liblo.send(osc_target, '/set', mode)
++        cherrypy.response.headers['Content-Type'] = 'text/plain; charset=utf-8'
++        return 'mode set requested: ' + mode
++    mode_set.exposed = True
++
++
+ 
+     # loads a file
+     def get_file(self, fpath):
+--- a/web/static/app.js
++++ b/web/static/app.js
+@@ -6,12 +6,14 @@
+ 
+ var editor = null
+ var currentEditorFile = '...'
++var loadedEditorContents = null
+ 
+ function getFile(fpath) {
+     $.get(appBaseURL + '/get_file/?fpath='+encodeURIComponent(fpath), function(data) {
+         editor.setValue(data)
+         editor.gotoLine(1)
+         currentEditorFile = fpath
++        loadedEditorContents = editor.getValue()
+         $("#title").html(fpath)
+     });
+ }
+@@ -372,10 +374,40 @@
+ }
+ 
+ function saveMode() {
+-  $.post(appBaseURL + "/save", { fpath: currentEditorFile, contents: editor.getValue() })
+-	.done(function(data) {
+-    console.log(data);
+-	});
++  var savedPath = currentEditorFile;
++  var savedContents = editor.getValue();
++  return $.post(appBaseURL + "/save", { fpath: savedPath, contents: savedContents })
++    .done(function(data) {
++      // A completed save must not mark another open file as saved.
++      if (currentEditorFile === savedPath) loadedEditorContents = savedContents;
++      console.log(data);
++    });
++}
++
++function loadDisplayedMode() {
++  var displayedPath = currentEditorFile;
++  var modePath = typeof displayedPath === 'string' ? displayedPath : '';
++  if (modePath.charAt(0) !== '/') modePath = '/' + modePath;
++  if (!/^\/sdcard\/Modes\/oFLua\/[^/]+\/main\.lua$/.test(modePath) ||
++      modePath.indexOf('/../') !== -1 || modePath.indexOf('/./') !== -1 ||
++      loadedEditorContents === null) {
++    $('#load-mode-status').text('Open a live mode main.lua under /sdcard/Modes/oFLua first.');
++    return;
++  }
++  var displayedContents = editor.getValue();
++  if (displayedContents !== loadedEditorContents && !window.confirm(
++      'This main.lua has unsaved edits. Load the saved version anyway? ' +
++      'Your edits will remain in the editor. Cancel to save them first.')) return;
++  // Use the displayed file captured above, never workingDir or selected table row.
++  if (currentEditorFile !== displayedPath || editor.getValue() !== displayedContents) return;
++  $('#load-mode-status').text('Requesting mode load...');
++  return $.post(appBaseURL + '/mode_set', { mode: modePath })
++    .done(function() {
++      $('#load-mode-status').text('Load requested for ' + modePath + ' (saved version).');
++    })
++    .fail(function() {
++      $('#load-mode-status').text('Load failed. Check that this is an existing live mode main.lua.');
++    });
+ }
+ 
+ function reloadMode() {
+@@ -504,6 +536,7 @@
+     });
+ 
+     $("#reload-mode").click(reloadMode);
++    $("#load-this-mode").click(loadDisplayedMode);
+ 
+     $("#save").click(saveMode);
+ 
+--- a/web/static/app.html
++++ b/web/static/app.html
+@@ -92,6 +92,27 @@
+             overflow: hidden;
+         }
+         .side-button:hover {background-color:#666;}
++        /* Semantic link/button controls share the stock div-button appearance. */
++        #ha-modes-link, #ha-modes-link:link, #ha-modes-link:visited,
++        #load-this-mode {
++            color: inherit;
++            font: inherit;
++            line-height: normal;
++            border: 0;
++            border-radius: 0;
++            appearance: none;
++            -webkit-appearance: none;
++            box-sizing: content-box;
++        }
++        #ha-modes-link:focus-visible, #load-this-mode:focus-visible {
++            outline: 1px solid #aaa;
++            outline-offset: 1px;
++        }
++        #load-this-mode:disabled {
++            background-color: #444;
++            opacity: .5;
++            cursor: default;
++        }
+         .fsdir:hover {
+             background-color:#666;
+             cursor: pointer;
+@@ -263,6 +284,10 @@
+ 
+         <div id="save" class="side-button">Save</div>
+         <div id="reload-mode" class="side-button">Reload Mode</div>
++        <div style="clear:both;"></div>
++        <a id="ha-modes-link" class="side-button" href="/modes" target="_blank" rel="noopener">Modes</a>
++        <button id="load-this-mode" class="side-button" type="button">Load this mode</button>
++        <div id="load-mode-status" role="status" style="clear:both; font-size:12px; padding:4px;"></div>
+         <div style="clear:left;"></div>
+         <br/>
+ 

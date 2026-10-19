@@ -24,5 +24,8 @@ part of the HAUTLLE mode payload. No unrelated third-party image/font assets are
 included. Existing authorship and source notices in all mode files are retained.
 
 EYESY_OS and installed system libraries remain separate dependencies. This
-repository includes only the scoped beta-controller patch, not the OS or full PD
-file. Unchanged patch context retains the underlying project's terms.
+repository includes scoped beta-controller and CherryPy/editor patches, not the
+full OS, PD file or web dependency distribution. Unchanged patch context retains
+the underlying project's terms. `notices/EYESY-OS-LICENSE.txt` preserves the notice
+from the inspected beta OS for the web patch and its machine-readable hunks;
+the installed CherryPy library and other web dependencies retain their own licenses.

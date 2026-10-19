@@ -1,7 +1,9 @@
 {
+  "automatic_user_mode_deletion": false,
   "base_plan_sha256": "7a16e79c00604fff561a9f2daf6e389c7383fecf30b2c67bfcf21fc1d12b2bce",
   "brief_runtime": "Markov-Ghosts-Markov passed with PERSIST and injected OSC knobs",
   "build": "resumed_94_verified_partial_objects_plus_1_identical_binding_plus_2_new_compiles",
+  "cleanup_check": "2026-10-19: 16 live modes and required assets/helpers/runtime hashes intact; engine/PD/web active; rollback present; no active swap",
   "date": "2026-10-18",
   "engine_units": 97,
   "installer_end_to_end": false,
@@ -19,5 +21,6 @@
   },
   "public_dependency_licenses": "Retained upstream; MassSt map data ODbL",
   "source_files": 650,
-  "source_manifest_sha256": "52b335369c32a8862ce042dac2f8693af225b76233bb0fcd5fcd70962afb16bd"
+  "source_manifest_sha256": "52b335369c32a8862ce042dac2f8693af225b76233bb0fcd5fcd70962afb16bd",
+  "web_controls": "provenance/web-controls.json"
 }

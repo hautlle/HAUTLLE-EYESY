@@ -1,5 +1,6 @@
 Third-party notices are retained verbatim in this directory and their source trees.
 engine-LICENSE.txt: existing Critter & Guitari engine BSD notice.
+EYESY-OS-LICENSE.txt: inspected beta OS notice for CherryPy/editor patch context.
 openFrameworks-LICENSE.md: OF MIT notice, including supplied ofxOsc source.
 ofxLua-LICENSE.txt: ofxLua's upstream terms.
 oscpack-NOTICE.txt, GLM-0.9.9.7-copying.txt, json-LICENSE.MIT, utf8-NOTICE.txt:

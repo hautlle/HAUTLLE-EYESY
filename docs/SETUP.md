@@ -38,14 +38,35 @@ The installer adds only the starter; it does not automatically replace your menu
 On beta, [enable the recorder controller option](CONTROLLER.md) if you want
 Shift+knobs reserved for recording. The engine installer does not change PD.
 
+To add **Modes** and **Load this mode** to the stock beta editor, follow
+[Web controls](WEB-CONTROLS.md). This is a separate opt-in patch with its own
+check, apply and rollback commands; stock Settings remain available.
+
+## Optional menu and storage cleanup
+
+The release contains the [16 artistic modes](SUPPORTED-MODES.md) and their required
+assets. The checked spare card uses this roster; the installer preserves your own
+menu. To reproduce that roster, copy all 16 complete folders, verify they load,
+then archive only the unwanted folders you have reviewed individually. Keep the
+archive outside the live `/sdcard/Modes/oFLua/` directory or off the card. The
+temporary `HAUTLLE_START_HERE` starter is redundant once the canonical Markov folder
+is installed and you have selected another mode. Refresh the renderer's mode list
+through the normal interface after changing its folders.
+
+Do not bulk-delete modes or empty `bin/data`: Ghosts' Lua files, KCSC's mesh and
+shaders, MassSt's map, the bundled modules and frozen-layer helpers are required.
+Keep stock runtime copies and rollback files. Review old downloads/build output
+individually only after confirming they are not referenced by the active launcher
+or a recovery journal. No menu or storage deletion is automated by this release.
+
 ## Undo or recover
 
 ```sh
 sudo python3 install.py rollback
 ```
 
-The activation journal selects the matching workspace. Controller rollback is
-separate. If a build was interrupted and reports leftover temporary swap, keep its
+The activation journal selects the matching workspace. Controller and web rollback
+are separate. If a build was interrupted and reports leftover temporary swap, keep its
 files and run `sudo python3 install.py cleanup-build --workspace sdcard` after the
 build stops. It checks the process group and file identity before cleanup; never
 delete an active swap file manually.
