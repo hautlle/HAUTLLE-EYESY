@@ -1,29 +1,23 @@
 # HAUTLLE EYESY
 
-Live visual instruments for the original CM3/CM3+ EYESY OF/Lua environment,
-by [HAUTLLE](https://hautlle.com).
+HAUTLLE EYESY expands the Critter & Guitari EYESY with 16 custom visual modes,
+knob-motion recording, and a shared toolkit. Explore glitch, texture, geometry,
+and motion: shape the visuals by hand, then replay your knob gestures.
 
-This source release includes the native engine, 16 live modes with their required
-assets, shared Lua helpers, and tools for building, installing and rolling back.
-It targets the inspected 20211213 beta image and the reviewed custom legacy
-Raspbian 10 armhf setup. It is not an OS image or a modern Raspberry Pi/KMS port.
+Built with openFrameworks and Lua, by [HAUTLLE](https://hautlle.com).
 
-Start with [Setup](docs/SETUP.md). The source build can take an hour or longer.
-The installer prepares a separate engine and leaves activation to an explicit
-command. Keep a backup of your card and modes.
+**[Get started](docs/SETUP.md)**
 
-The spare-card build linked successfully, Markov and Architectural Ghosts passed
-a brief runtime check, and the user confirmed physical Shift+knob recording.
-The packaged installer has local checks; its full install/rollback workflow has
-not been exercised end-to-end on the device. [Validation details](docs/VALIDATION.md)
-state exactly what was checked.
+- **[Explore the modes](docs/SUPPORTED-MODES.md)** — from Markov and Murmuration
+  to Architectural Ghosts.
+- **[Record knob movement](docs/CONTROLLER.md)** — with the recorder option
+  enabled, hold Shift, move a knob, then release Shift to replay.
+- **[Make your own visuals](docs/DEVELOPMENT.md)** — build on the shared toolkit
+  and [frozen-layer Lua API](FROZEN-LAYER-API.txt).
 
-- [Modes and assets](docs/SUPPORTED-MODES.md)
-- [Recorder controls](docs/CONTROLLER.md)
-- [Developer build notes](docs/DEVELOPMENT.md)
-- [Frozen-layer Lua API](FROZEN-LAYER-API.txt)
-- [Licensing and credits](docs/LICENSING.md)
+For the original CM3/CM3+ EYESY on the OF/Lua systems listed in
+[Setup](docs/SETUP.md). This release requires building from source, which can take
+an hour or longer. Back up your card and modes before installing.
 
-New HAUTLLE work uses BSD-3-Clause where identified. Upstream code retains its
-original licenses. MassSt's map data is © OpenStreetMap contributors under ODbL;
-see its bundled [notice](modes/HAUTLLE_MASST_WALK/NOTICE.txt).
+[Validation and known limits](docs/VALIDATION.md) ·
+[Licensing and credits](docs/LICENSING.md)
